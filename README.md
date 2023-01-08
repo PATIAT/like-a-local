@@ -232,7 +232,7 @@
 
 ### Wireframes 
 
-- [You can view my wireframes in PDF form here.](https://github.com/PATIAT/like-a-local/blob/main/assets/wireframes/like-a-local-wireframes.pdf) 
+- [You can view my wireframes in PDF form here.](https://github.com/PATIAT/like-a-local/blob/main/assets/wireframes/like-a-local-wireframes.png) 
 
 # Features 
  
