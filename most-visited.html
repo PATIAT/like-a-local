@@ -52,16 +52,33 @@
             </nav>
         </header>
 
-        <!-- Used to give a break point in the page -->
-        <div class="container">
-            <hr />
-        </div>
+        <main class="container">
+        
+        <!-- Used to give a break point in the page -->    
+        <hr />
+
+        <section class="container">
+            <div class="p-4 p-md-5 mb-4 rounded dark-bg">
+                <div class="col-md-12 px-0">
+                <h1 class="display-4 fst-italic">Our customers favourite places...</h1>
+                <p class="lead my-3">Our guide George was so knowledgable and knew exactly what we were looking for. If you're planning a trip to London, don't hesitate to book with these travel guides.</p>
+                <p><em>John & Mary - Edinburgh</em></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Idea taken from Code Institute Resume project -->
+        <section class="container">
+            <div id="map">
+                <p>Map section</p>
+            </div>
+        </section>
+        
 
         <!-- Used to give a break point in the page -->
-        <div class="container">
-            <hr />
-        </div>
-
+        <hr />
+        
+        </main>
         <!-- ========== Footer section ========== -->
         <!-- ========== Idea originally taken from Code Institute project (Resume) ========== -->
         <footer class="container">
@@ -118,5 +135,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkC_qREvHMC9mCFa4u3EKLi_Qb_PWka5Q&callback=initMap&v=weekly" defer></script>
+        <script src="assets/scripts/most-visited.js"></script>
     </body>
 </html>
