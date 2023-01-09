@@ -505,3 +505,11 @@ input[type="radio"]:checked ~ .potential-answer {
         opacity: 1;
     }
 }
+
+/* ========== 
+Most Visited Page Styles 
+========== */
+
+/* Style taken from the Code Institute resume project */
+
+div#map {min-height: 360px;}
