@@ -188,7 +188,7 @@ Page Styles
 ========== */
 
 #hero-bg {
-    background: url('../images/london-map-bg.png') no-repeat center;
+    background: url("../images/london-map-bg.png") no-repeat center;
     border-radius: 5px 0px 5px 0px;
 }
 
@@ -238,12 +238,11 @@ Quiz Page Styles
 }
 
 .game-holder {
-    background: url('../images/london-map-bg.png') no-repeat center;
+    background: url("../images/london-map-bg.png") no-repeat center;
     border-radius: 5px 0px 5px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 75vh;
 }
 
 /* Styles for the question holder area */
@@ -489,24 +488,6 @@ input[type="radio"]:checked ~ .potential-answer {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 /* ========== 
 Most Visited Page Styles 
 ========== */
@@ -514,6 +495,5 @@ Most Visited Page Styles
 /* Style taken from the Code Institute resume project */
 
 div#map {
-    min-height: 400px;
-    border-radius: 5px;
+    min-height: 360px;
 }
