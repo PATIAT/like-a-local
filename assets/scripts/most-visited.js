@@ -1,49 +1,44 @@
-function initMap () {
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 9,
-        center: { lat: 51.5074, lng: 0.1272 },
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: { lat: 51.5074, lng: -0.1272 },
     });
 
     // Create an array of alphabetical characters used to label the markers.
-    var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    // Add some markers to the map.
-    var markers = locations.map(function(location, i) {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
-        });
-    });
-    
-    // Add a marker clusterer to manage the markers.
-    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
-    
     // Locations of the most visited places
     const locations = [
-    { lat: -31.56391, lng: 147.154312 },
-    { lat: -33.718234, lng: 150.363181 },
-    { lat: -33.727111, lng: 150.371124 },
-    { lat: -33.848588, lng: 151.209834 },
-    { lat: -33.851702, lng: 151.216968 },
-    { lat: -34.671264, lng: 150.863657 },
-    { lat: -35.304724, lng: 148.662905 },
-    { lat: -36.817685, lng: 175.699196 },
-    { lat: -36.828611, lng: 175.790222 },
-    { lat: -37.75, lng: 145.116667 },
-    { lat: -37.759859, lng: 145.128708 },
-    { lat: -37.765015, lng: 145.133858 },
-    { lat: -37.770104, lng: 145.143299 },
-    { lat: -37.7737, lng: 145.145187 },
-    { lat: -37.774785, lng: 145.137978 },
-    { lat: -37.819616, lng: 144.968119 },
-    { lat: -38.330766, lng: 144.695692 },
-    { lat: -39.927193, lng: 175.053218 },
-    { lat: -41.330162, lng: 174.865694 },
-    { lat: -42.734358, lng: 147.439506 },
-    { lat: -42.734358, lng: 147.501315 },
-    { lat: -42.735258, lng: 147.438 },
-    { lat: -43.999792, lng: 170.463352 },
+        { lat: 51.5007, lng: -0.1246 }, // Big Ben
+        { lat: 51.5014, lng: -0.1419 }, // Buckingham Palace
+        { lat: 51.5138, lng: -0.0984 }, // St Paul's Cathedral
+        { lat: 51.5033, lng: -0.1196 }, // London Eye
+        { lat: 51.5081, lng: -0.0759 }, // Tower of London
+        { lat: 51.5034, lng: -0.1276 }, // 10 Downing Street
+        { lat: 51.4995, lng: -0.1248 }, // Houses of Parliament
+        { lat: 51.4994, lng: -0.1273 }, // Westminster Abbey
+        { lat: 51.5018, lng: -0.1405 }, // Victoria Memorial
+        { lat: 51.5228, lng: -0.1547 }, // Madame Tussauds
+        { lat: 51.5074, lng: -0.0993 }, // Tate Modern
+        { lat: 51.4964, lng: -0.176 }, // Natural History Museum
+        { lat: 51.4992, lng: -0.1629 }, // Harrods
+        { lat: 51.5387, lng: -0.0164 }, // London Stadium / Olympic Park
+        { lat: 51.556, lng: -0.2796 }, // Wembley Stadium
+        { lat: 51.4786, lng: -0.2947 }, // Royal Botanical Gardens
+        { lat: 51.5028, lng: -0.0029 }, // Millenium Dome
+        { lat: 51.5045, lng: -0.0865 }, // The Shard
+        { lat: 51.5056, lng: -0.0752 }, // Tower Bridge
+        { lat: 51.5065, lng: -0.0812 }, // HMS Belfast
     ];
-}
 
-window.initMap = initMap;
+    // Add some markers to the map.
+    const markers = locations.map(function (location, i) {
+        return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length],
+        });
+    });
+
+    // Add a marker clusterer to manage the markers.
+    const markerCluster = new markerClusterer.MarkerClusterer({ map, markers });
+}
