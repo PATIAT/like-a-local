@@ -243,6 +243,7 @@ Quiz Page Styles
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 75vh;
 }
 
 /* Styles for the question holder area */
@@ -512,4 +513,7 @@ Most Visited Page Styles
 
 /* Style taken from the Code Institute resume project */
 
-div#map {min-height: 360px;}
+div#map {
+    min-height: 400px;
+    border-radius: 5px;
+}
