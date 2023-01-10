@@ -1,21 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Must Visit | Like a Local</title>
-        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
-        <meta name="description" content="Like a Local is your No1 travel guide advisor for city breaks and short stays" />
-        <meta name="keywords" content="travel guide, travel, city breaks, tourist, tourism, short breaks, holiday" />
-        <meta name="author" content="Like a Local" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Most Visited | Like a Local</title>
+        <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+        <meta name="description" content="Like a Local is your No1 travel guide advisor for city breaks and short stays">
+        <meta name="keywords" content="travel guide, travel, city breaks, tourist, tourism, short breaks, holiday">
+        <meta name="author" content="Like a Local">
         <!-- Bootstrap 5.3.0 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <!-- Fontawesome -->
+
         <script src="https://kit.fontawesome.com/12ef280c55.js" crossorigin="anonymous"></script>
+
         <!-- General CSS styles -->
-        <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+        <!-- Google Maps API code taken from Google Maps Platform -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Styles supplied by Google Maps API and renamed -->
+        <link href="assets/css/must-visit-style.css" rel="stylesheet">
+
+        <!-- Script supplied by Google Maps API and renamed -->
+        <script src="assets/scripts/must-visit.js"></script>
+
+        <!-- Code supplied by Google Maps API - Neighborhood Discovery -->
+        <script>
+            const CONFIGURATION = {
+                capabilities: { search: true, distances: false, directions: false, contacts: true, atmospheres: true, thumbnails: true },
+                pois: [
+                    { placeId: "ChIJc2nSALkEdkgRkuoJJBfzkUI" },
+                    { placeId: "ChIJH-tBOc4EdkgRJ8aJ8P1CUxo" },
+                    { placeId: "ChIJQR9pg8sEdkgRKeWNNYlDdPU" },
+                    { placeId: "ChIJG-CxwNoEdkgRXx26gHZwVf8" },
+                    { placeId: "ChIJeclqF84EdkgRtKAjTmWFr0I" },
+                    { placeId: "ChIJs3AXzDIbdkgRWE0xp5kzxDg" },
+                    { placeId: "ChIJq4lX1doEdkgR5JXPstgQjc0" },
+                    { placeId: "ChIJ5574rdIEdkgRA9294QpXDhw" },
+                    { placeId: "ChIJeclqF84EdkgRYkL4mtJ7rLM" },
+                    { placeId: "ChIJl-cjD9QEdkgRVkkQt3pySRI" },
+                    { placeId: "ChIJGeIsmrgEdkgRlsvY9Maa0A0" },
+                    { placeId: "ChIJm_mee7cEdkgRM0sbLsHGeWg" },
+                    { placeId: "ChIJMUId1iwbdkgRjmeHrj-skio" },
+                    { placeId: "ChIJC-dXrNIEdkgRRDkHwRzwoeY" },
+                    { placeId: "ChIJr_4cVy8FdkgRIrNbO93eUFM" },
+                    { placeId: "ChIJVwS659IEdkgRkDBpUYSalUc" },
+                    { placeId: "ChIJEYfH57cEdkgR-_nTJFs0hRc" },
+                    { placeId: "ChIJDx_3p9IEdkgRw-c7-JcLvnU" },
+                    { placeId: "ChIJ19zvf8wEdkgROmHH72PtzZg" },
+                    { placeId: "ChIJNZJ_3tYEdkgRWe8bC0b2gdI" },
+                ],
+                mapRadius: 2000,
+                mapOptions: { center: { lat: 51.5074256, lng: -0.1271814 }, fullscreenControl: true, mapTypeControl: true, streetViewControl: false, zoom: 16, zoomControl: true, maxZoom: 20, mapId: "" },
+                mapsApiKey: "AIzaSyDkC_qREvHMC9mCFa4u3EKLi_Qb_PWka5Q",
+            };
+
+            function initMap() {
+                new NeighborhoodDiscovery(CONFIGURATION);
+            }
+        </script>
+        <script id="nd-place-results-tmpl" type="text/x-handlebars-template">
+            {{#each places}}
+              <li class="place-result">
+                <div class="text">
+                  <button class="name">{{name}}</button>
+                  <div class="info">
+                    {{#if rating}}
+                      <span>{{rating}}</span>
+                      <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star/v15/24px.svg" alt="rating" class="star-icon"/>
+                    {{/if}}
+                    {{#if numReviews}}
+                      <span>&nbsp;({{numReviews}})</span>
+                    {{/if}}
+                    {{#if priceLevel}}
+                      &#183;&nbsp;<span>{{#each dollarSigns}}${{/each}}&nbsp;</span>
+                    {{/if}}
+                  </div>
+                  <div class="info">{{type}}</div>
+                </div>
+                <button class="photo" style="background-image:url({{photos.0.urlSmall}})" aria-label="show photo in viewer"></button>
+              </li>
+            {{/each}}
+        </script>
+        <script id="nd-place-details-tmpl" type="text/x-handlebars-template">
+            <div class="navbar">
+              <button class="back-button">
+                <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg" alt="back"/>
+                Back
+              </button>
+            </div>
+            <header>
+              <h2>{{name}}</h2>
+              <div class="info">
+                {{#if rating}}
+                  <span class="star-rating-numeric">{{rating}}</span>
+                  <span>
+                    {{#each fullStarIcons}}
+                      <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star/v15/24px.svg" alt="full star" class="star-icon"/>
+                    {{/each}}
+                    {{#each halfStarIcons}}
+                      <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star_half/v17/24px.svg" alt="half star" class="star-icon"/>
+                    {{/each}}
+                    {{#each emptyStarIcons}}
+                      <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star_outline/v9/24px.svg" alt="empty star" class="star-icon"/>
+                    {{/each}}
+                  </span>
+                {{/if}}
+                {{#if numReviews}}
+                  <a href="{{url}}" target="_blank">{{numReviews}} reviews</a>
+                {{else}}
+                  <a href="{{url}}" target="_blank">See on Google Maps</a>
+                {{/if}}
+                {{#if priceLevel}}
+                  &#183;
+                  <span class="price-dollars">
+                    {{#each dollarSigns}}${{/each}}
+                  </span>
+                {{/if}}
+              </div>
+              {{#if type}}
+                <div class="info">{{type}}</div>
+              {{/if}}
+            </header>
+            <div class="section">
+              {{#if address}}
+                <div class="contact">
+                  <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v10/24px.svg" alt="Address" class="icon"/>
+                  <div class="text">
+                    {{address}}
+                  </div>
+                </div>
+              {{/if}}
+              {{#if website}}
+                <div class="contact">
+                  <img src="https://fonts.gstatic.com/s/i/googlematerialicons/public/v10/24px.svg" alt="Website" class="icon"/>
+                  <div class="text">
+                    <a href="{{website}}" target="_blank">{{websiteDomain}}</a>
+                  </div>
+                </div>
+              {{/if}}
+              {{#if phoneNumber}}
+                <div class="contact">
+                  <img src="https://fonts.gstatic.com/s/i/googlematerialicons/phone/v10/24px.svg" alt="Phone number" class="icon"/>
+                  <div class="text">
+                    {{phoneNumber}}
+                  </div>
+                </div>
+              {{/if}}
+              {{#if openingHours}}
+                <div class="contact">
+                  <img src="https://fonts.gstatic.com/s/i/googlematerialicons/schedule/v12/24px.svg" alt="Opening hours" class="icon"/>
+                  <div class="text">
+                    {{#each openingHours}}
+                      <div>
+                        <span class="weekday">{{days}}</span>
+                        <span class="hours">{{hours}}</span>
+                      </div>
+                    {{/each}}
+                  </div>
+                </div>
+              {{/if}}
+            </div>
+            {{#if photos}}
+              <div class="photos section">
+                {{#each photos}}
+                  <button class="photo" style="background-image:url({{urlSmall}})" aria-label="show photo in viewer"></button>
+                {{/each}}
+              </div>
+            {{/if}}
+            {{#if reviews}}
+              <div class="reviews section">
+                <p class="attribution">Reviews by Google users</p>
+                {{#each reviews}}
+                  <div class="review">
+                    <a class="reviewer-identity" href="{{author_url}}" target="_blank">
+                      <div class="reviewer-avatar" style="background-image:url({{profile_photo_url}})"></div>
+                      <div class="reviewer-name">{{author_name}}</div>
+                    </a>
+                    <div class="rating info">
+                      <span>
+                        {{#each fullStarIcons}}
+                          <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star/v15/24px.svg" alt="full star" class="star-icon"/>
+                        {{/each}}
+                        {{#each halfStarIcons}}
+                          <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star_half/v17/24px.svg" alt="half star" class="star-icon"/>
+                        {{/each}}
+                        {{#each emptyStarIcons}}
+                          <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star_outline/v9/24px.svg" alt="empty star" class="star-icon"/>
+                        {{/each}}
+                      </span>
+                      <span class="review-time">{{relative_time_description}}</span>
+                    </div>
+                    <div class="info">{{text}}</div>
+                  </div>
+                {{/each}}
+              </div>
+            {{/if}}
+            {{#if html_attributions}}
+              <div class="section">
+                {{#each html_attributions}}
+                  <p class="attribution">{{{this}}}</p>
+                {{/each}}
+              </div>
+            {{/if}}
+        </script>
     </head>
+
     <body>
         <!-- ========== Header and Navigation Section ========== -->
         <!-- ========== Originally sourced from Bootstrap library and styles altered ========== -->
@@ -29,16 +226,16 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="Go to the home page (opens in same tab)" href="index.html">Home</a>
+                                <a class="nav-link" href="index.html" aria-label="Go to the home page (opens in same tab)">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active href="must-visit.html" aria-label="page">Must Visit</a>
+                                <a class="nav-link active" href="must-visit.html" aria-current="page">Must Visit</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="london-quiz.html" aria-label="Go to the london quiz page (opens in same tab)">London Quiz</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="most-visited.html" aria-label="Go to the most visited page (opens in same tab)">Most Visited</a>
+                                <a class="nav-link" href="most-visited.html" aria-label="Go to the london quiz page (opens in same tab)">Most Visited</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html" aria-label="Go to the about page (opens in same tab)">About</a>
@@ -52,16 +249,64 @@
             </nav>
         </header>
 
-        <!-- Used to give a break point in the page -->
-        <div class="container">
-            <hr />
-        </div>
+        <main class="container">
+            <!-- Used to give a break point in the page -->
+            <hr>
 
-        <!-- Used to give a break point in the page -->
-        <div class="container">
-            <hr />
-        </div>
+            <!-- Main headings section (originally sourced from bootstrap library) to give the user an idea of what the page is about... -->
+            <section class="container">
+                <div class="p-3 p-md-3 mb-4 rounded dark-bg">
+                    <div class="col-md-12 px-0">
+                        <h2 class="display-4 fst-italic">Our customers favourite places...</h2>
+                        <p class="lead my-3">Explore the map below to discover some of our customers most visited and most loved London destinations.</p>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Code supplied by Google Maps API - Neighborhood Discovery -->
+            <div id="map-container" class="container">
+                <!-- Added extra container to hold google code within the boundry of the centre page -->
+                <div class="neighborhood-discovery">
+                    <div class="places-panel panel no-scroll">
+                        <header class="navbar">
+                            <div class="search-input">
+                                <input class="place-search-input" placeholder="Search nearby places">
+                                <button class="place-search-button">
+                                    <img src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="search">
+                                </button>
+                            </div>
+                        </header>
+                        <div class="results">
+                            <ul class="place-results-list"></ul>
+                        </div>
+                        <button class="show-more-button sticky">
+                            <span>Show More</span>
+                            <img class="right" src="https://fonts.gstatic.com/s/i/googlematerialicons/expand_more/v11/24px.svg" alt="expand">
+                        </button>
+                    </div>
+                    <div class="details-panel panel"></div>
+                    <div class="map"></div>
+                    <div class="photo-modal">
+                        <img alt="place photo"> <!-- Gives error on HTML validation for no src attribute but the images are pulled via JS script-->
+                        <div>
+                            <button class="back-button">
+                                <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/arrow_back/v11/24px.svg" alt="back">
+                            </button>
+                            <div class="photo-text">
+                                <div class="photo-place"></div>
+                                <div class="photo-attrs">Photo by <span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="marker-pin" xmlns="http://www.w3.org/2000/svg" width="26" height="38" fill="none">
+                        <path d="M13 0C5.817 0 0 5.93 0 13.267c0 7.862 5.59 10.81 9.555 17.624C12.09 35.248 11.342 38 13 38c1.723 0 .975-2.817 3.445-7.043C20.085 24.503 26 21.162 26 13.267 26 5.93 20.183 0 13 0Z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Used to give a break point in the page -->
+            <hr>
+        </main>
         <!-- ========== Footer section ========== -->
         <!-- ========== Idea originally taken from Code Institute project (Resume) ========== -->
         <footer class="container">
@@ -70,8 +315,8 @@
                     <div class="col-sm-6 text-left contacts">
                         <h1 class="footer-head"><i class="fa-sharp fa-solid fa-location-dot"></i> Like a Local - Travel Guides</h1>
                         <p class="footer-p">
-                            London, UK<br />
-                            Tel: <a href="tel:02034567891">020 3456 7891</a><br />
+                            London, UK<br>
+                            Tel: <a href="tel:02034567891">020 3456 7891</a><br>
                             Email: <a href="mailto:travel@likealocal.com">travel@likealocal.com</a>
                         </p>
                     </div>
@@ -104,7 +349,7 @@
                         </ul>
                     </div>
                 </div>
-                <hr />
+                <hr>
                 <div class="col-12 d-flex justify-content-center">
                     <p class="small copyright">
                         Copyright © 2022 Like a Local - Travel Guides
@@ -116,7 +361,7 @@
         <!-- Bootstrap 5.3.0 JS & Popper -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+        <!-- Google Maps API -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkC_qREvHMC9mCFa4u3EKLi_Qb_PWka5Q&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_neighborhooddiscovery_v2_cADEF" async defer></script>
     </body>
 </html>
