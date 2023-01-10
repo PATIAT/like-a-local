@@ -298,7 +298,7 @@ input[type="radio"]:checked ~ .potential-answer {
 
 .next-question-button-holder {
     width: 100%;
-    height: a;
+    height: auto;
     display: flex;
     justify-content: center;
 }
