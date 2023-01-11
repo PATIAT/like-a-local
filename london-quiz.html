@@ -56,123 +56,140 @@
             <!-- Used to give a break point in the page -->
             <hr>
 
+            <!-- Main headings section (originally sourced from bootstrap library) to give the user an idea of what the page is about... -->
+            <section class="container">
+                <div class="p-3 p-md-3 mb-4 rounded dark-bg">
+                    <div class="col-md-12 px-0">
+                        <h2 class="display-4 fst-italic">Test your knowledge</h2>
+                        <p class="lead my-3">Put your London knowledge to the test with our quiz game...</p>
+                    </div>
+                </div>
+            </section>
+
             <!--Game Holder-->
-            <div class="container text-center game-holder p-4">
-                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                    <div class="col">
-                        <!--End Game Modal-->
-                        <div class="container text-center">
-                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                                <div class="col">
-                                    <div class="outer-modal" id="final-score-display">
-                                        <div class="inner-modal">
-                                            <h1>Well done, You completed the quiz!</h1>
+            <div class="container">
+                <div class="container text-center game-holder p-4">
+                    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                        <div class="col">
+                            <!--End Game Modal-->
+                            <div class="container text-center">
+                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                                    <div class="col">
+                                        <div class="outer-modal" id="final-score-display">
+                                            <div class="inner-modal">
+                                                <h1>Well done, You completed the quiz!</h1>
 
-                                            <div class="grade-details p-2">
-                                                <p>Questions Answered : 10</p>
-                                                <p>Incorrect Answers : <span id="incorrect-answers"></span></p>
-                                                <p>Correct Answers : <span id="correct-answers"></span></p>
-                                                <p>Grade : <span id="score-percentage"></span>%</p>
-                                                <p class="grade-comments"><span id="comments"></span></p>
-                                            </div>
+                                                <div class="grade-details p-2">
+                                                    <p>Questions Answered : 10</p>
+                                                    <p>Incorrect Answers : <span id="incorrect-answers"></span></p>
+                                                    <p>Correct Answers : <span id="correct-answers"></span></p>
+                                                    <p>Grade : <span id="score-percentage"></span>%</p>
+                                                    <p class="grade-comments"><span id="comments"></span></p>
+                                                </div>
 
-                                            <div class="modal-button-holder">
-                                                <button class="modal-btn" onclick="closeFinalScoreDisplay()">Play Again</button>
+                                                <div class="modal-button-holder">
+                                                    <button class="modal-btn" onclick="closeFinalScoreDisplay()">Play Again</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="container text-center">
-                            <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2">
-                                <!--Score Data-->
-                                <div class="col p-2 stats-holder">
-                                    <h1 class="stats-score">Score :</h1>
-                                    <h1 class="stats-score"><span id="player-score"></span> / 10</h1>
-                                </div>
+                            <div class="container">
+                                <div class="container text-center">
+                                    <div class="row row-cols-2 row-cols-sm-1 row-cols-md-2">
+                                        <!--Score Data-->
+                                        <div class="col p-2 stats-holder">
+                                            <h1 class="stats-score">Score :</h1>
+                                            <h1 class="stats-score"><span id="player-score"></span> / 10</h1>
+                                        </div>
 
-                                <!--Question Data-->
-                                <div class="col p-2 stats-holder">
-                                    <h1 class="stats-question">Question :</h1>
-                                    <h1 class="stats-question"><span id="question-number"></span> / 10</h1>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Used to give a break point in the page -->
-                        <br>
-
-                        <div class="container text-center">
-                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                                <!--Quiz Holder-->
-                                <div class="col">
-                                    <div class="container text-center">
-                                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                                            <!--Question Area-->
-                                            <div class="col p-4 question-holder">
-                                                <h1 id="display-question"></h1><!-- Empty heading as it displays question pushed from JS file-->
-                                            </div>
+                                        <!--Question Data-->
+                                        <div class="col p-2 stats-holder">
+                                            <h1 class="stats-question">Question :</h1>
+                                            <h1 class="stats-question"><span id="question-number"></span> / 10</h1>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <!-- Used to give a break point in the page -->
+                            <br>
 
-                                    <div class="container text-center">
-                                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                                            <!--Pick Answer Modal-->
-                                            <div class="col p-1">
-                                                <div class="outer-modal" id="unchecked-answer-display">
-                                                    <div class="inner-modal">
-                                                        <h1>Please Pick An Answer</h1>
-                                                        <div class="modal-button-holder">
-                                                            <button class="modal-btn" onclick="closeUncheckedAnswerDisplay()">Continue</button>
+                            <div class="container text-center">
+                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                                    <!--Quiz Holder-->
+                                    <div class="col">
+                                        <div class="container">
+                                            <div class="container text-center">
+                                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                                                    <!--Question Area-->
+                                                    <div class="col p-4 question-holder">
+                                                        <h1 id="display-question"></h1><!-- Empty heading as it displays question pushed from JS file-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="container text-center">
+                                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                                                <!--Pick Answer Modal-->
+                                                <div class="col p-1">
+                                                    <div class="outer-modal" id="unchecked-answer-display">
+                                                        <div class="inner-modal">
+                                                            <h1>Please Pick An Answer</h1>
+                                                            <div class="modal-button-holder">
+                                                                <button class="modal-btn" onclick="closeUncheckedAnswerDisplay()">Continue</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="container answer-holder text-center">
-                                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-center">
-                                            <!--Answer 1-->
-                                            <div class="col p-4 answer">
-                                                <span>
-                                                    <input type="radio" id="option-one" name="potential-answer" class="radio" value="answerOne">
-                                                    <label for="option-one" class="potential-answer" id="answer-option-one"></label>
-                                                </span>
-                                            </div>
+                                        <div class="container">
+                                            <div class="container answer-holder text-center">
+                                                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-center">
+                                                    <!--Answer 1-->
+                                                    <div class="col p-2 answer">
+                                                        <span>
+                                                            <input type="radio" id="option-one" name="potential-answer" class="radio" value="answerOne">
+                                                            <label for="option-one" class="potential-answer" id="answer-option-one"></label>
+                                                        </span>
+                                                    </div>
 
-                                            <!--Answer 2-->
-                                            <div class="col p-4 answer">
-                                                <span>
-                                                    <input type="radio" id="option-two" name="potential-answer" class="radio" value="answerTwo">
-                                                    <label for="option-two" class="potential-answer" id="answer-option-two"></label>
-                                                </span>
-                                            </div>
+                                                    <!--Answer 2-->
+                                                    <div class="col p-2 answer">
+                                                        <span>
+                                                            <input type="radio" id="option-two" name="potential-answer" class="radio" value="answerTwo">
+                                                            <label for="option-two" class="potential-answer" id="answer-option-two"></label>
+                                                        </span>
+                                                    </div>
 
-                                            <!--Answer 3-->
-                                            <div class="col p-4 answer">
-                                                <span>
-                                                    <input type="radio" id="option-three" name="potential-answer" class="radio" value="answerThree">
-                                                    <label for="option-three" class="potential-answer" id="answer-option-three"></label>
-                                                </span>
-                                            </div>
+                                                    <!--Answer 3-->
+                                                    <div class="col p-2 answer">
+                                                        <span>
+                                                            <input type="radio" id="option-three" name="potential-answer" class="radio" value="answerThree">
+                                                            <label for="option-three" class="potential-answer" id="answer-option-three"></label>
+                                                        </span>
+                                                    </div>
 
-                                            <!--Answer 4-->
-                                            <div class="col p-4 answer">
-                                                <span>
-                                                    <input type="radio" id="option-four" name="potential-answer" class="radio" value="answerFour">
-                                                    <label for="option-four" class="potential-answer" id="answer-option-four"></label>
-                                                </span>
+                                                    <!--Answer 4-->
+                                                    <div class="col p-2 answer">
+                                                        <span>
+                                                            <input type="radio" id="option-four" name="potential-answer" class="radio" value="answerFour">
+                                                            <label for="option-four" class="potential-answer" id="answer-option-four"></label>
+                                                        </span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="container next-question-button-holder text-center p-4">
-                                        <!--Next Question Button-->
-                                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
-                                            <button onclick="moveToNextQuestion()">Next Question</button>
+                                        <div class="container next-question-button-holder text-center p-2">
+                                            <!--Next Question Button-->
+                                            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1">
+                                                <button onclick="moveToNextQuestion()">Next Question</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
