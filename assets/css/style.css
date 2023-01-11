@@ -207,6 +207,10 @@ Page Styles
     font-style: italic;
 }
 
+.lead-home {
+    font-weight: bold;
+}
+
 /* ========== 
 Quiz Page Styles 
 ========== */
