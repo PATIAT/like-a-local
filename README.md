@@ -1,10 +1,10 @@
-<h2 align="left"><img src=""></h2>
+<h2 align="left"><img src="assets/images/favicon.png" height="50px" width="50px"></h2>
 
 # Like a Local - Travel Guides
 
 ## Code Institute Milestone Project 2 – Interactive Front End Project
 
-<h2 align="left"><img src=""></h2>
+<h2 align="left"><img src="assets/readme/like-a-local-mockup.png"></h2>
 
 *  Like a Local is a travel guide website that specialises in visits to the UK capital city of London. The objective of the website is to provide information to potential visitors to London with a view to them purchasing a travel guide pack from the website. The website is designed to be fully responsive so that the users experience is consistent across any device.   
 
@@ -14,11 +14,11 @@
 
 ## Live Project  
 
-[You can view the live project here.]()
+[You can view the live project here.](https://patiat.github.io/like-a-local/)
 
 ## GitHub Repository  
 
-[You can find the project repository here.]()
+[You can find the project repository here.](https://github.com/PATIAT/like-a-local)
 
 # Contents  
 
@@ -125,14 +125,14 @@
 ### Colour Scheme  
 
 #### Primary Colours
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/readme/primary-colours.png"></h2>  
 
 #### Secondary Colours
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/readme/secondary-colours.png"></h2>  
 
-- A simple colour scheme has been used with three primary colours and three secondary colours. The colours are all relatively light with dark type being used in contrast to give a refined and clean appearance.  
+- A simple colour scheme has been used with three primary colours and three secondary colours. The colours are all relatively vibrant and bright with dark type being used in contrast to give a refined and clean appearance.  
 
--  
+- This colour pallette has been chosen primarily on personal preference but additionally because the colours work well together and compliment each other.
 
 - I used the [Material Design Colour Tool](https://material.io/resources/color/#!/?view.left=0&view.right=0) to decide on colour choices.  
 
@@ -142,7 +142,7 @@
 
 ### Imagery  
 
-- The images have been sourced from free image website and attributed to the photographer where necessary. The images were chosen to compliment the colour scheme and to ensure consistency throughout the website.
+- The images have been sourced from free image websites and attributed to the photographer where necessary. The images were chosen to compliment the colour scheme and to ensure consistency throughout the website.
 
 -  
 
@@ -184,9 +184,9 @@
 
   - Each page of the website contains a heading to consistently show the user what to expect on each page. 
  
-  - All of the pages have subheadings to clearly demonstrate a separation of content that helps the user experience when navigating the content. 
+  - All of the pages except from the home page have heading section to clearly define what is to be expected from the page contents below it. 
 
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/readme/page-heading-example.png"></h2> 
 
 ### Navigation Bar 
 
@@ -196,26 +196,26 @@
 
   - The navigation bar was sourced from bootstrap documentation and has been customised using CSS to create a unique background, font and colour combination.
 
-  - The active page is shown in a different colour to the rest of the navigation links and is underlined while active. Aria controls are in place to assist visually impaired users. This along with the hover changes were implemented with the use of CSS and bootstrap. 
+  - The active page is shown in a different colour to the rest of the navigation links. Aria controls are in place to assist visually impaired users. This along with the hover changes were implemented with the use of CSS and bootstrap. 
 
-  - Each page, except location.html and contact.html has a back to top of page button at the bottom of each page, just above the footer. This was implemented to improve user experience and reduce swipes and scrolls of screens. 
-
-<h2 align="left"><img src=""></h2> 
-<h2 align="left"><img src=""></h2> 
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/readme/navigation-desktop.png"></h2> 
+<h2 align="left"><img src="assets/readme/navigation-tablet.png"></h2> 
+<h2 align="left"><img src="assets/readme/navigation-mobile.png"></h2> 
 
 ### Buttons 
 
   - The buttons used across the pages are consistent throughout using the colour palletes of the primary and secondary colours as details above.  
 
-  - The text on each of the buttons is followed by a greater than sign to guide the user to follow the link. 
+  - The text on each of the buttons is followed by a chevron icon sourced from fontawesome to guide the user to follow the link. 
 
   - The buttons use a hover class so when the user hovers over it, it changes colour. Both colour variants were assessed and determined to be legible. 
 
   - Bootstrap buttons were used and customised with CSS.
 
-<h2 align="left"><img src=""></h2> 
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/readme/button-example-one.png"></h2> 
+<h2 align="left"><img src="assets/readme/button-example-two.png"></h2> 
+<h2 align="left"><img src="assets/readme/button-example-three.png"></h2> 
+<h2 align="left"><img src="assets/readme/button-example-four.png"></h2> 
 
 ### Footer 
 
@@ -227,8 +227,9 @@
 
   - The social media icons were source from font awesome.
 
-<h2 align="left"><img src=""></h2> 
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/readme/footer-desktop.png"></h2> 
+<h2 align="left"><img src="assets/readme/footer-tablet.png"></h2> 
+<h2 align="left"><img src="assets/readme/footer-mobile.png"></h2> 
 
 ### Wireframes 
 
@@ -246,13 +247,13 @@
 
 ### User interaction 
 
-  - Quiz
+  - Google Places API Neighborhood (Must Visit Page) - This allows the user to interact with the Google Maps and Google Places API's and find areas of interest in and around London.
 
-  - Email form
+  - The London Quiz Page - This allows users to complete an interactive quiz of 10 randomly generated questions from a bank of 40. There are four potential answers with only one correct answer. The user must select an answer of their choice and click the "Next Question" button to find out if they have selected the correct answer. If selected, the correct answer will highlight green and the score total will increment by one point. If the incorrect answer is selected, the selected answer will highlight red and the correct answer will highlight green to show the user what the correct answer was. After 10 questions, the user will be presented with an overall score and be able to click a "Play Again" button to start a new quiz. If no answer is selected and the user attempts to click "Next Question" an alert will pop up to tell the user to pick an option.
 
-  - Google Maps Clustering
+  - Google Maps API Clustering (Most Visited Page) - This allowes the user to interact with the Google Maps to see where the most visited places are. These places are represented by markers on the map which cluster together depending on the level of zoom the user selects. 
 
-  - Google Maps Neighborhood
+  - Email JS (Get In Touch Page) - This page allows the user to complete a simple form and upon clicking the "Get In Touch" an email is sent which is facilitated by Email JS. The code will present the user with a modal to tell them if the message has been successful or not.
 
   - The navbar turns into a drop down (hamburger on smaller devices). 
 
@@ -282,7 +283,7 @@
 
 ## Frameworks Libraries and Programs 
  
-- [Bootstrap 5.2](https://getbootstrap.com/)  
+- [Bootstrap 5.3](https://getbootstrap.com/)  
   - I used bootstrap throughout the site to make it responsive. The website uses Bootstrap's Containers, Grid System and Flexbox and Button classes. I sourced code from the Bootstrap documentation when building the Navbar, Carousel, Buttons and Contact Form,  
    
 - [Google Fonts](https://fonts.google.com/) 
@@ -321,9 +322,14 @@
 
 - [Pexels](https://www.pexels.com/) 
   - Pexels was used to source images for the website, including:
-    -
-    -
-    -
+    - [Photo by Ivelin Donchev:](https://www.pexels.com/photo/tower-bridge-14765794/)
+    - [Photo by Karam Alani:](https://www.pexels.com/photo/grayscale-photo-of-city-buildings-5012092/)
+    - [Photo by Karolina Fijas:](https://www.pexels.com/photo/)birds-eye-view-of-city-skyline-in-grayscale-photo-5944410/
+    - [Photo by Mike B:](https://www.pexels.com/photo/aerial-view-of-city-buildings-6100149/)
+    - [Photo by Andrés García:](https://www.pexels.com/photo/aerial-view-of-city-buildings-4854415/)
+    - [Photo by Kevin Bidwell:](https://www.pexels.com/photo/)bald-man-with-a-serious-facial-expression-2380794/
+    - [Photo by Jan Tafel:](https://www.pexels.com/photo/monochrome-portrait-of-man-2341350/)
+    - [Photo by Mwabonje:](https://www.pexels.com/photo/beautiful-woman-smiling-for-a-photo-1820559/)
 
 - [TinyPNG](https://tinypng.com/) 
   - TinyPNG was used to compress images for a faster loading time. 
@@ -335,13 +341,18 @@
   - Google Chrome's Dev Tools were utilised during the build of the project to test functionality, responsiveness and for debugging purposes.
 
 - [Canva](https://www.canva.com/)
-  - Canva was used to create the logo and the favicon used on the website and README documentation. I decided not to use the logo on the navbar as it was distracting and I felt the typography alone looks more visually pleasing.
+  - Canva was used to create the logo and the favicon used on the website and README documentation. 
 
 ## Application Programming Interface (API's)
  
-- 
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript)
+  - This was used to create the cluster map on the most-visited.html page.
  
--  
+- [Google Placed API](https://developers.google.com/maps/documentation/places/web-service/overview)
+  - This was used to create the neighbourhood search map on the must-visit.html page
+
+- [EmailJS](https://www.emailjs.com/)
+  - This was used to create the functionality of sending the data from the form on the get-in-touch.html page.
 
 # Testing 
 
@@ -355,7 +366,7 @@ Forks are used to propose changes to someone else's project or to use someone el
 
 To Fork a Github Repository:
 
-1. Log in to GitHub and navigate to the [GitHub Repository]()
+1. Log in to GitHub and navigate to the [GitHub Repository](https://github.com/PATIAT/like-a-local)
 2. In the top-right corner of the page, click Fork.
 3. Select an owner for the forked repository.
 4. By default, forks are named the same as their parent repositories. You can change the name of the fork to distinguish it further.
@@ -370,7 +381,7 @@ You will now have a fork of the repository, but you don't have the files in that
 
 To make a local clone:
 
-1. Log in to GitHub and go to the [GitHub Repository]()
+1. Log in to GitHub and go to the [GitHub Repository](https://github.com/PATIAT/like-a-local)
 2. Above the list of files, click  Code.
 3. Copy the URL for the repository.
   - To clone the repository using HTTPS, under "Clone with HTTPS", click the 'Copy' icon. 
@@ -401,18 +412,18 @@ Click [here](https://docs.github.com/en/github-ae@latest/get-started/quickstart/
 
 The project was deployed to GitHub Pages using these steps:
 
-1. Log in to GitHub and go to the [GitHub Repository]()
+1. Log in to GitHub and go to the [GitHub Repository](https://github.com/PATIAT/like-a-local)
 2. Locate the Navbar at the top of the Repository (not top of page). Click the Settings tab.
 3. Locate the Navbar on the left hand side of the page. Click the "Pages" section (under 'Code and automation').
 4. Under "Source", click the dropdown called "None" and select "main". Click save.
 5. The page will automatically refresh.
-6. A notification will appear at the top of the page with the [link]() to the deployed site. You can return to this GitHub Pages section to access the link.
+6. A notification will appear at the top of the page with the [link](https://patiat.github.io/like-a-local/index.html) to the deployed site. You can return to this GitHub Pages section to access the link.
 
 # Credits
 
 ## Code
 
--   [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/): The Bootstrap library was utilised throughout the development of the project to make site responsive using the Bootstrap Grid System and Flexbox. Bootstrap documentation was referred to when developing the Navigation, Carousel, Accordian, Buttons and Contact Form. 
+-   [Bootstrap 5.2](https://getbootstrap.com/): The Bootstrap library was utilised throughout the development of the project to make site responsive using the Bootstrap Grid System and Flexbox. Bootstrap documentation was referred to when developing the Navigation, Carousel, Accordian, Buttons and Contact Form. 
 
 -   [Code Institute](https://codeinstitute.net/): I used the Code Institute's learning management system to remind myself of certain lessons and to use specific code from some of the projects done during the course. For example, the footer from the Resume project and the use of the iFrame from the Coders Coffee House Lessons.
 
