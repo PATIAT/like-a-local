@@ -188,7 +188,7 @@ Page Styles
 ========== */
 
 #hero-bg {
-    background: url("../images/london-map-bg.png") no-repeat center;
+    background: url("../images/london-map-bg.webp") no-repeat center;
     border-radius: 5px 0px 5px 0px;
 }
 
@@ -242,7 +242,7 @@ Quiz Page Styles
 }
 
 .game-holder {
-    background: url("../images/london-map-bg.png") no-repeat center;
+    background: url("../images/london-map-bg.webp") no-repeat center;
     border-radius: 5px 0px 5px 0px;
     display: flex;
     align-items: center;

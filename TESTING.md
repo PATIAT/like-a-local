@@ -104,19 +104,35 @@ Each page was assessed in terms of desktop performance and mobile performance. E
 #### Mobile
 <h2 align="left"><img src=""></h2>  
 
+- Suggestions were:
+   - Serve images in next-gen formats
+
 ### Lighthouse report - Must Visit Page
 #### Desktop
 <h2 align="left"><img src=""></h2> 
 
+- Suggestions were:
+   - Serves images with low resolution
+
 #### Mobile
 <h2 align="left"><img src=""></h2>  
 
+- Suggestions were:
+   - Serves images with low resolution
+   - Serve images in next-gen formats
+
 ### Lighthouse report - London Quiz Page
 #### Desktop
-<h2 align="left"><img src=""></h2> > 
+<h2 align="left"><img src=""></h2>
+
+- Suggestions were:
+   - Serve images in next-gen formats
 
 #### Mobile
 <h2 align="left"><img src=""></h2> 
+
+- Suggestions were:
+   - Serve images in next-gen formats
 
 ### Lighthouse report - Most Visited Page
 #### Desktop
