@@ -99,65 +99,64 @@ Each page was assessed in terms of desktop performance and mobile performance. E
 
 ### Lighthouse report - Home Page
 #### Desktop
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-home-desktop.png"></h2> 
 
 #### Mobile
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/testing/lighthouse-home-mobile.png"></h2>  
 
 - Suggestions were:
-   - Serve images in next-gen formats
+   - Eliminate render-blocking resources
 
 ### Lighthouse report - Must Visit Page
 #### Desktop
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-must-visit-desktop.png"></h2> 
 
-- Suggestions were:
-   - Serves images with low resolution
 
 #### Mobile
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/testing/lighthouse-must-visit-mobile.png"></h2>  
 
 - Suggestions were:
-   - Serves images with low resolution
-   - Serve images in next-gen formats
+   - Eliminate render-blocking resources
+   - Reduce unused JavaScript
 
 ### Lighthouse report - London Quiz Page
 #### Desktop
-<h2 align="left"><img src=""></h2>
+<h2 align="left"><img src="assets/testing/lighthouse-london-quiz-desktop.png"></h2>
 
-- Suggestions were:
-   - Serve images in next-gen formats
 
 #### Mobile
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-london-quiz-mobile.png"></h2> 
 
 - Suggestions were:
-   - Serve images in next-gen formats
+   - Eliminate render-blocking resources
 
 ### Lighthouse report - Most Visited Page
 #### Desktop
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-most-visited-desktop.png"></h2> 
 
 #### Mobile
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/testing/lighthouse-most-visited-mobile.png"></h2>  
+
+- Suggestions were:
+   - Serve images in next-gen formats
 
 ### Lighthouse report - About Page
 #### Desktop
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/testing/lighthouse-about-desktop.png"></h2>  
 
 #### Mobile
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-about-mobile.png"></h2> 
 
 ### Lighthouse report - Get in Touch Page
 #### Desktop
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-get-in-touch-desktop.png"></h2> 
 
 #### Mobile
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/lighthouse-get-in-touch-mobile.png"></h2> 
 
 The lighthouse reports made a number of recommendations which included:
-- Serving images in next-gen formats such as WebP and AVIF to provide better compression. I decided not pursue this as these formats are not supported on all browsers at this time. Additionally, the user experience is not hugely affected by this.
-- Some pages heading elements were not in a sequentially descending order. I decided to amend the code to ensure compliance with this recommendation and to ensure that a fully semantic structure was adpoted to make it easier for assistive navigation technologies.
+- Serving images in next-gen formats such as WebP and AVIF to provide better compression. I decided to pursue this and this increased performance significantly.
+- Some images of provided via the Google API's are not served in next-gen formats.
 
 # A11y Color Contrast Accessibility Checker
 
@@ -229,11 +228,7 @@ No issues were identified with appearance, responsiveness or functionality durin
 
 The website was also testing on actual hardware including:
 - iPhone 13 Pro
-<h2 align="left"><img src=""></h2>  
-- iPhone 11
-<h2 align="left"><img src=""></h2> 
-- iPhone 6
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src=""></h2>   
 - MacBook Air 2015
 <h2 align="left"><img src=""></h2> 
 - HP All in One Desktop 27
