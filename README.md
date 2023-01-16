@@ -100,7 +100,7 @@
 
 * As a new visitor to the website and tourist to London, I would like to be able to contact the travel guides if I have any questions or special requests.
 
-### Returning Tenants  
+### Returning Visitors  
 
 *The website users that fall into this category are considering returning to London, having already previously visisted.*  
 
@@ -144,9 +144,9 @@
 
 - The images have been sourced from free image websites and attributed to the photographer where necessary. The images were chosen to compliment the colour scheme and to ensure consistency throughout the website.
 
--  
+- Where practical, I have used landscape images and the aspect ratio has been maintained. 
 
-- 
+- An image of a map of London is used on the home page but is also used as a background on the quiz page. 
 
 - Both ARIA roles and attributes as will as alt tags have been used to assist users with disabilities.
 
@@ -166,7 +166,7 @@
 
   - Must Visit: This page utilises the Google Maps API with neighbourhood discovery information to show local attractions. 
 
-  - London Quiz: This page contains an interactive quiz which consists of a bank of 10 randomly generated questions (from a bank of 40) which are all related to London. The aim of this page is to allow users to test their knowledge of London either before visiting for the first time of prior to a return visit. Or just for fun.
+  - London Quiz: This page contains an interactive quiz which consists of a bank of 10 randomly generated questions (from a total of 40) which are all related to London in some wat. The aim of this page is to allow users to test their knowledge of London either before visiting for the first time of prior to a return visit. Or just for fun. 
 
   - Most Visited: This page utilises the Google Maps API clustering function to demonstrate where previous users of the travel guide service have visited during their visits to London.
 
@@ -233,7 +233,7 @@
 
 ### Wireframes 
 
-- [You can view my wireframes in PDF form here.](https://github.com/PATIAT/like-a-local/blob/main/assets/wireframes/like-a-local-wireframes.png) 
+- [You can view my wireframes here.](https://github.com/PATIAT/like-a-local/blob/main/assets/wireframes/like-a-local-wireframes.png) 
 
 # Features 
  
@@ -249,7 +249,21 @@
 
   - Google Places API Neighborhood (Must Visit Page) - This allows the user to interact with the Google Maps and Google Places API's and find areas of interest in and around London.
 
-  - The London Quiz Page - This allows users to complete an interactive quiz of 10 randomly generated questions from a bank of 40. There are four potential answers with only one correct answer. The user must select an answer of their choice and click the "Next Question" button to find out if they have selected the correct answer. If selected, the correct answer will highlight green and the score total will increment by one point. If the incorrect answer is selected, the selected answer will highlight red and the correct answer will highlight green to show the user what the correct answer was. After 10 questions, the user will be presented with an overall score and be able to click a "Play Again" button to start a new quiz. If no answer is selected and the user attempts to click "Next Question" an alert will pop up to tell the user to pick an option.
+  - The London Quiz Page - This allows users to complete an interactive quiz: 
+  
+     - The quiz shows a:
+
+        - A current score (out of 10) which is updated for each turn.
+        - A current question (out of 10) which is updated for each turn.
+        - A current question.
+        - Four potential answers.
+        - A "Next Question >" button.
+
+     - The user must select one of the four potential answers, if they do not a function is called to display a modal which is desinged to prompt that action.
+     - When the user selects their answer, the answer is differentiated from the others by changing colour. 
+     - When the user selects their answer and clicks "Next Button >", their selection will either turn green (for correct answers) or red (for incorrect answers). In the event that the user selects the incorrect answer, the correct answer will also be highlighted in green to show them which answer was correct.
+     - Upon completion of the last question, another function will be called which prompts the display of another modal, this time displaying the users score and grade. A different message will be displayed based on the overall grade.
+     - Once the round is complete, the user can then click the "Play Again" button to start a new round.
 
   - Google Maps API Clustering (Most Visited Page) - This allowes the user to interact with the Google Maps to see where the most visited places are. These places are represented by markers on the map which cluster together depending on the level of zoom the user selects. 
 
@@ -319,7 +333,6 @@
 - [Adobe Stock](https://www.adobestock.com/) 
   - Adobe stock was used to source the map image of London on the home page.
 
-
 - [Pexels](https://www.pexels.com/) 
   - Pexels was used to source images for the website, including:
     - [Photo by Ivelin Donchev:](https://www.pexels.com/photo/tower-bridge-14765794/)
@@ -356,9 +369,29 @@
 
 # Testing 
 
-- For all testing documentation, please [click here]() for more information.
+- For all testing documentation, please [click here](https://github.com/PATIAT/like-a-local/blob/main/TESTING.md) for more information.
 
 # Deployment
+
+## Creating a Gitpod Workspace
+
+The project was created in Gitpod using the Code Institute Gitpod Full Template using these steps:
+
+1. Log in to GitHub and go to the [Code Institute student template for Gitpod](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. Click 'Use this Template' next to the Green Gitpod button.
+3. Add a repository name and click 'Create reposiory from template'.
+4. This will create a copy of the template in your own repository. Now you can click the green 'Gitpod' button to open a workspace in Gitpod.
+
+## GitHub Pages
+
+The project was deployed to GitHub Pages using these steps:
+
+1. Log in to GitHub and go to the [GitHub Repository](https://github.com/PATIAT/like-a-local)
+2. Locate the Navbar at the top of the Repository (not top of page). Click the Settings tab.
+3. Locate the Navbar on the left hand side of the page. Click the "Pages" section (under 'Code and automation').
+4. Under "Source", click the dropdown called "None" and select "main". Click save.
+5. The page will automatically refresh.
+6. A notification will appear at the top of the page with the [link](https://patiat.github.io/like-a-local/index.html) to the deployed site. You can return to this GitHub Pages section to access the link.
 
 ## Forking the GitHub Repository
 
@@ -408,40 +441,30 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 Click [here](https://docs.github.com/en/github-ae@latest/get-started/quickstart/fork-a-repo) for the GitHub quick start guide with images and more detailed explanations of the above process.
 
-## GitHub Pages
-
-The project was deployed to GitHub Pages using these steps:
-
-1. Log in to GitHub and go to the [GitHub Repository](https://github.com/PATIAT/like-a-local)
-2. Locate the Navbar at the top of the Repository (not top of page). Click the Settings tab.
-3. Locate the Navbar on the left hand side of the page. Click the "Pages" section (under 'Code and automation').
-4. Under "Source", click the dropdown called "None" and select "main". Click save.
-5. The page will automatically refresh.
-6. A notification will appear at the top of the page with the [link](https://patiat.github.io/like-a-local/index.html) to the deployed site. You can return to this GitHub Pages section to access the link.
-
 # Credits
 
 ## Code
 
--   [Bootstrap 5.2](https://getbootstrap.com/): The Bootstrap library was utilised throughout the development of the project to make site responsive using the Bootstrap Grid System and Flexbox. Bootstrap documentation was referred to when developing the Navigation, Carousel, Accordian, Buttons and Contact Form. 
+-   [Bootstrap 5.3](https://getbootstrap.com/): The Bootstrap library was utilised throughout the development of the project to make site responsive using the Bootstrap Grid System and Flexbox. Bootstrap documentation was referred to when developing the Navigation, Carousel, Accordian, Buttons and Contact Form. 
 
 -   [Code Institute](https://codeinstitute.net/): I used the Code Institute's learning management system to remind myself of certain lessons and to use specific code from some of the projects done during the course. For example, the footer from the Resume project and the use of the iFrame from the Coders Coffee House Lessons.
+
+-   [Google Maps API Documentation](https://developers.google.com/maps/documentation?_gl=1*uijbhj*_ga*OTIyNjE3NjUuMTY2MTg1NjYwOA..*_ga_NRWSTWS78N*MTY3Mzg5NTY0NS44LjEuMTY3Mzg5NTY0Ny4wLjAuMA..): I referred to this when setting up the must-visit and most-visited pages. The sample code was also used and modified using CSS for the neighborhood places API integration on the must-visit page.
 
 ## Content
 
 -   Add links to other sites that inspired this one, if there are any.
-    - []() - 
-    - []() - 
+    - [Travelocity](https://www.travelocity.com/) - I used this website for inspiration on design and layout.
+    - [Visit London](https://www.visitlondon.com/things-to-do/london-attractions-map) - I used this website for inspiration on design and content.
 
 - To develop this README file I referred to the [Code Institute's Sample README](https://github.com/Code-Institute-Solutions/SampleREADME/blob/master/README.md). This can also be said for the TESTING file which followed the same format.
 
 ## Acknowledgements
 
-- Thank you to my Code Institute Tutor Chris Quinn for helpful feedback, pointers and tips that I would never have though of on my own.
+- Thank you to my Code Institute Tutor Chris Quinn for helpful feedback, pointers and tips that I would never have thought of on my own.
 
 - Thank you to the tutors and staff at Code Institute and City of Bristol College for their support.
 
 This website is entirely fictional and is intended for educational purposes only and for the development of a portfolio.
 
 Paul Trotter, 2023.
-
