@@ -263,6 +263,10 @@ Quiz Page Styles
     height: 200px;
 }
 
+#display-question {
+    font-size: x-large;
+}
+
 /* Styles for the answer holder area */
 
 .answer .potential-answer {
