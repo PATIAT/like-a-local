@@ -201,7 +201,7 @@ No issues were identified with appearance, responsiveness or functionality durin
 
 On mobile and tablet, the site was tested in the following browsers:
 - Chrome
-- Safari
+- Safari *see unresolved bugs
 - Firefox
 
 No issues were identified with appearance, responsiveness or functionality during usage of the website on these browsers.
@@ -228,115 +228,97 @@ No issues were identified with appearance, responsiveness or functionality durin
 
 The website was also testing on actual hardware including:
 - iPhone 13 Pro
-<h2 align="left"><img src=""></h2>   
+<h2 align="left"><img src="assets/testing/testing-hardware-iphone13pro.png"></h2>   
 - MacBook Air 2015
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/testing-hardware-mac2015.jpg"></h2> 
 - HP All in One Desktop 27
-<h2 align="left"><img src=""></h2>  
+<h2 align="left"><img src="assets/testing/testing-hardware-hp27.png"></h2>  
 - iPad 2021
-<h2 align="left"><img src=""></h2> 
+<h2 align="left"><img src="assets/testing/testing-hardware-ipad2021.png"></h2> 
 
 # Testing User Stories  
 
-## Prospective Tenants  
+### New visitors to London 
 
-* As a prospective tenant, I would like to have an overview of the holiday cottage to determine if it is suitable for my requirements.  
+* As a new visitor to the website and tourist to London, I would like to learn some basic information about London. 
 
-  - The home page has a carousel which demonstrates the standard of the rooms in the cottage. Additionally, the property overview page has detailed information on the holiday cottage and amenities.
+  - The website contains various information about London which can be accessed through the maps and also the quiz.
 
-* As a prospective tenant, I would like to know the details of the holiday cottage including its attributes such as; number of bedrooms, bathrooms etc...
+* As a new visitor to the website and tourist to London, I would like to test my existing knowledge on all things London by taking a fun and interactive quiz game with London themed questions.
 
-  - The property details page contains detailed information on each of the rooms and other attributes of the property.
+  - The quiz page allows users to test their knowledge about London by playing a game which randomly generates 10 questions from a bank of 40 for each turn of the quiz.
 
-* As a prospective tenant, I would like to know what activities and attractions are available in the local area.
+* As a new visitor to the website and tourist to London, I would like to be able to search for things to do using a map of the area of London.
 
-  - The activities page contains detailed information and links to external websites which contain further information on activities that are available to do locally.   
+  - The must visit page allows users to use Google's Places API to search for attractions and destinations in the local area by using the search tool and map.
 
-* As a prospective tenant, I would like to be able to contact the owners if I have any questions or special requests.  
+* As a new visitor to the website and tourist to London, I would like to learn where previous customers have visited to decide if I would like to follow suit.
 
-  - There is a form on the contact page where users can contact the owners with any special requests they may have.
+  - The most visited page allows users to view location markers on a map which demonstrate where previous users have visited.
 
-## Returning Tenants  
+* As a new visitor to the website and tourist to London, I would like to be able to contact the travel guides if I have any questions or special requests.
 
-* As a returning tenant, I would like to know if the holiday cottage has any new attributes, such as additional facilities etc...  
+  - The get in touch page allows users to be able to contact the business owners to request dates for a tour and to make special requests. The users can also communicate their level of knowledge by using the form.
 
-  - The information on the property details page can be updated as necessary when updates or new features are made available.
+### Returning Visitors  
 
-* As a returning tenant, I would like see genuine reviews from other people and families that have stayed at the holiday cottage.
+* As a returning visitor to the website and tourist to London, I would like to know if any new features have been added to the website or if any are planned.
 
-  - Although this is thought to be a useful feature of a website of this type, it is beyond the scope of this project and this user story has therefore been added to the list of potential future features.
+  - Due to the website being of a simple layout and design, new features will be immediately noticeable to returning users.
 
-* As a returning tenant, I would like to know if there are any upcoming events in the local area that I could attend on my visit.  
+* As a returning visitor to the website and tourist to London, I would like to know if the frequently visited page has been updated to include recent users.
 
-  - The activities page can facilitate this requirement because the page contains links to local organisation websites that promote local events.
+  - This is not a feature that is currently included in the website design but will be placed in the potential future features section in the README.md file.
 
-* As a returning tenant, I would like to be able to let the owners know I am returning tenant so I can receive potential discounted rates.  
+* As a returning visitor to the website and tourist to London, I would like to be able to let the website owners know that I am a returning customer when contacting them.
 
-  - The form on the contact page can be used to advise the owners if tenants are returning or are first time visitors.
+  - This is not a current feature of the website but will be placed in the potential future features section in the README.md file.
 
-## Business Owners  
+### Business Owners   
 
-* As the business owner, I would like my website to be user friendly across all devices and accessible to visually impaired users.
+* As the business owner, I would like my website to be user friendly across all devices and accessible to visually impaired users.  
 
-  - The website is fully responsive on all device screen sizes and maintains the desired styles throughout. Additionally it is written in semantic code for accessibility. The website also contains meta descriptions and keywords to improve search engine optimisation.
+  - This has been acheived and is demonstrated via the testing of the website on many devices either digitally via the google chrome dev tools or via viewing the website on different hardware.
 
-* As the business owner, I would like the website to promote the quality of the cottage and the activities and attractions in the local area.  
-  
-  - The website connects with the style of the holiday cottage. The colour pallete, typography and styling all fit with the style and decor or the holiday cottage itself.
+* As the business owner, I would like the website to effectively promote London as a tourism destination and what the business can offer to facilitate better visits for tourists.
 
-* As the business owner, I would like the website to emphasise the openness of us as owners and promote the asking of questions from users via the contact form and social media platforms.
+  - This has been acheived by allowing users to choose from multiple options when learning about London, whether through the Google Maps API's or the quiz.
+   
+* As the business owner, I would like the website to emphasise the openness of us as owners and promote the asking of questions from users via the contact form and social media platforms.  
 
-  - This is acheived by the showcasing of the property through the images and content. Additionally, the presence of a form allowing users to ask anything also displays the openness of the owners.
+  - This has been acheived by creating a form which works and submits an email to the business owners with accurate and relevant information given by the user.
 
 # Peer Review
 
 ## Slack
 
-- In the last stages of development and testing, I submitted my project for review to fellow students at Code Institute. This was facilitated via the peer code review on Slack. Feedback included:
-  - *I’ve had a cursory look at the website, accessed all of the navbar, and links to external sites/socials. For what its worth (I’m just a student on here) it is a great website! Aesthetically, super clean and consistent. All the functionality is there and the user experience is made easy. I tested it on my Mac (large screen) and it worked fine.*
+- In the last stages of development and testing, I submitted my project for review to fellow students at Code Institute. This was facilitated via the peer code review on Slack. The time between requesting the peer review and the project submission was tight and therefore responses would always be limited. However, one peer reviewed the website and had the following feedback:
 
-## Google Forms
-
-- A form was created using Google Forms and was distributed to the business owners, family and close friends for their feedback. Feedback included:
-  - *Looks great. Easy to use.*
-  - *Stunning looking website. Well designed, very easy to navigate and it looks classy.*
-  - *Brilliant website, very informative and easy to use.*
-  - *It's excellent.*
-
-- [You can view the peer review form responses in PDF format here.](https://github.com/PATIAT/west-mill-cottage/blob/main/assets/form-responses/west-mill-cottage-peer-review-form-responses.pdf) 
+  - "When I completed the quiz I couldn't see how to close the pop up window with the score without having to click on play again. Might be good to have an "x" to close it down". 
+  - This is a good point that was not necessarily considered during development. I have decided not to make the change at this late stage but will instead add it to the opportunities for future performance enhancement section.
   
 # Mentor
 
 ## Assistance
 
-- I made site live on GitHub pages early on in the development process to test on real hardware iPhone 13 PRO and iPhone 11, Mac Book Air 2015 and HP Desktop 27in.
-- Word separation of image file names were highlighted as not being consistent so files were renamed with underscores for a more consistent approach.
-- Contact page: Although required fields are identified via an * there is no narrative to explicitly state that fields marked with * must be completed. Therefore, a narrative was put in place above the contact form.
-- Following a pre-project submission meeting with my Tutor regarding the site layout on large screens and potentially reconfiguring the code to include a margin on the left and right to improve flow and appearance on very large screens, I have decided against making these changes at this late stage of the project. This was also discussed with my CI mentor who advised that this can lead to display scaling issues on 2k or 4k displays where the content can appear very small and not as intended. This concept will be considered when planning any future projects as it is a commonly adopted practise which can be demonstrated by visiting websites such as [apple](https://www.apple.com/uk/).
-- Following a pre-project submission meeting with my Tutor regarding the about page content, it was advised that I change the text from centre align to left align for improved readability. This advice was adopted.
+- I made site live on GitHub pages early on in the development process to test on real hardware iPhone 13 PRO, Mac Book Air 2015 and HP Desktop 27in.
+- Following a pre-project submission meeting for Milestone Project 1 with my Tutor regarding the site layout on large screens and potentially reconfiguring the code to include a margin on the left and right to improve flow and appearance on very large screens. This was adopted for Milestone Project 2.
 
 # Bugs
 
 ## Resolved
-- Heading elements were not in a sequentially descending order. Some blocks of code had `h5` elements as the first heading. Each page was assessed for `h5` elements and amended to `h1`. Some of the CSS required amendments to maintain the style of the website e.g., size and fonts.
-- The Google Maps iFrame did not have a title. This would have impacted on the user experience of impaired users. Therefore, the code was amended and a title attribute added to the Google iFrame element.
-- Whilst manually testing the website (contact page), I noticed that when completing the form and submitting it, although the form is set up sucessfully and I was receiving the success message from code institute, the input name and value were not pulling through correctly. Upon inspection of the code, I discovered that I had omitted the name attribute from the label and input elements. This was resolved at the time of discovery.
+- The testing of the main JavaScript files was undertaken manually by performing the actions as the user and making amendments where necessary. This process was implemented throughout the entirety of the development of the project and worked well but a more regimented and rigorous testing regime would likely be required for larger and more complex projects.
+- During the testing of the website using Google Lighthouse, the performance on mobile was effected negatively by serving the images in PNG format. Therefore, I decided to convert the images to WebP format which significantly improved mobile performance. 
+- During the Color Contrast Accessibility Validator testing, I made amendments to the styles of certain buttons and elements on the page to make them more accessible.
 
-## Unesolved
-- None.
+## Unresolved
+- When viewing the home page on an iPad in portrait orientation and using safari, the images within the cards on the home page stretch. This appears to be a known bug with the safari browser. I therefore need to find a solution to prevent the stretching. 
 
 ## Opportunities for future performance enhancement
 - Chrome Lighthouse suggestions including:
-    - Serve images in next-gen formats (Image formats like WebP and AVIF often provide better compression than PNG or JPEG, which means faster downloads and less data consumption).
     - Eliminate render-blocking resources (Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles).
     - Serve static assets with an efficient cache policy (A long cache lifetime can speed up repeat visits to your page).
+- Quiz page
+    - When a user completes the quiz, there is only a button that states "Play Again" and no button to "Close" if the user wishes to move elsewhere on the website. I beleive this would enhance user experience.
 
-
-
-<link href="neighborhood_discovery.css" rel="stylesheet">
-    <script src="neighborhood_discovery.js"></script>
-
-    couldn't get the above to work so realised I had to change the file paths as these were just given as place holders.
-
-    must-visit.html
-    Line 290 <img alt="place photo"> <!-- Gives error on HTML validation for no src attribute but the images are pulled via JS script-->
+[Back to README.md](https://github.com/PATIAT/like-a-local/blob/main/README.md)

@@ -285,6 +285,10 @@
 
   - Genuine reviews could be displayed on the website or via a third party widget such as Trust Pilot.
 
+### Updates
+
+  - The most-visited page could be updated based on recent clients favourite and most loved destinations during their visit. This could be displayed as a "last updated: 17/01/2023" tage on the page following an update to co-ordinates in the code itself.
+
 # Technologies Used 
  
 ## Languages Used 
